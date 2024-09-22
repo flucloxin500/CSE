@@ -1,0 +1,43 @@
+#include <bits/stdc++.h>
+#include <conio.h>  // for getch function
+#include <unistd.h> // for sleep function
+#include <cstdlib> // for the exit() function
+
+/// colour code
+#define RESET "\x1B[0m"
+#define RED "\x1B[31m"
+#define GREEN "\x1B[32m"
+#define YELLOW "\x1B[33m"
+#define BLUE "\x1B[34m"
+#define MAGENTA "\x1B[35m"
+#define CYAN "\x1B[36m"
+#define Bright_CYAN "\x1B[96m"
+#define Bright_Magenta "\x1B[95m"
+
+struct node
+{
+    string id; //employee id 
+    string name; // employee name
+    string dept; // employee department
+    double salary; // employee salary
+    node *next; // pointer to another node.
+};
+node *Head = NULL; // head of the linked list, initialized to NULL
+vector<pair<string, string>> users; // a vector of pairs of strings, used to store user name & pass
+
+system("cls"); // for clear the screen
+
+node *new_node = new node; // new_node that points to a node .  * symbol indicates that new_node is a pointer. new keyword allocates memory . also used as (node *)malloc(sizeof(node)) here
+sizeof(node), it returns the number of bytes required to store an instance of the node structure. malloc return a pointer thats why (node *) its used a pointer.
+
+new_node->id,name,dept,salary => new node er moddhe store korsi eigula.
+
+new_node->next = NULL; // Set the next pointer to NULL
+
+node *ptr = Head; // Start from the head
+
+while (ptr->next != NULL) // Traverse to the last node
+
+ptr->next = new_node; // Link the last node to the new node
+
+getch(); // Wait for a key press before proceeding
